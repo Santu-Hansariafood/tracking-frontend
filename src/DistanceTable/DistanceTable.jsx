@@ -9,7 +9,7 @@ const DistanceTable = ({ userId }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/track/${userId}`);
+        const response = await axios.get(`https://tracking-backend-hac4.onrender.com/track/${userId}`);
         setData(response.data);
       } catch (error) {
         console.error('Error fetching data', error);

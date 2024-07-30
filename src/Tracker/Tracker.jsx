@@ -48,7 +48,7 @@ const Tracker = () => {
     // Send distance to the server every minute
     const sendDistanceToServer = async () => {
       try {
-        await axios.post('http://localhost:5000/track', {
+        await axios.post('https://tracking-backend-hac4.onrender.com/track', {
           userId,
           distance,
         });
@@ -67,7 +67,7 @@ const Tracker = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:5000/logout', { userId });
+      await axios.post('https://tracking-backend-hac4.onrender.com/logout', { userId });
       navigate('/');
     } catch (error) {
       console.error('Error logging out', error);
